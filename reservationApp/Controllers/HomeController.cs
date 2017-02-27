@@ -16,21 +16,24 @@ namespace reservationApp.Controllers
         }
 
       [HttpPost]
-        public ActionResult Index(string location, string chkIn, string chkOut, string roomQty)
+        public ActionResult setValues(string location, string chkIn, string chkOut, string roomQty)
         {
-            string loc = location;
-            reservationModel setData = new reservationModel();
-            setData.loc = location;
-            setData.chkInDate = chkIn;
-            setData.chkOutDate = chkOut;
-            setData.room_Qty = roomQty;
+            reservationTable setData = new reservationTable();
 
             using (DatabaseEntities  db = new DatabaseEntities())
             {
-               d
+                setData.location = location;
+                setData.chkInDate = chkIn;
+                setData.chkOutdate = chkOut;
+                setData.roomQty = roomQty;
+                db.reservationTables.Add(setData);
+                db.SaveChanges();
+
                
             }
 
+
+            Response.Write("hrllo");
             return View();
         }
     }
