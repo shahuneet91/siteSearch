@@ -21,13 +21,15 @@ textarea {
 #mainContent{
     border: 2px solid #ff0000;
     border-radius:25px;
-    background-color:#ebe673;
+    background-color:crimson;
     opacity:0.9;
     padding:10px;
 }
 .submitBtn{
     margin-top:10px;
     border-radius:10px;
+    
+    color:white;
 }
 
 .btn{
@@ -35,3 +37,10 @@ textarea {
     color:white;
      box-shadow: 5px 5px 2px #888888;
 }
+
+.ui-datepicker {
+   background: black;
+   border: 1px solid #dad7d7;
+   color: white;
+   opacity:0.7;
+ }

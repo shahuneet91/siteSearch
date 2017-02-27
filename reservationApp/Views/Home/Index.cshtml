@@ -17,24 +17,20 @@
         <div id="mainContent" class="col-md-6 col-md-offset-3">
             <form action="setValues" method="post">
                 <div class="form-group col-md-12">
-                    <label for="location">Location:</label>
-                    <input type="text" class="form-control" name="location" id="location">
+                    <input type="text" class="form-control" name="location" id="location" placeholder="Location">
                 </div>
 
                 <div class="col-md-4 form-group">
-                    <label for="chkIn">Check In:</label>
-                    <input type="text" class="form-control" name="chkIn" id="chkIn">
+                    <input type="text" class="form-control" name="chkIn" id="chkIn" placeholder="Check In">
                 </div>
 
                 <div class="col-md-4 form-group">
-                    <label for="chkOut">Check Out:</label>
-                    <input type="text" name="chkOut" class="form-control" id="chkOut">
+                    <input type="text" name="chkOut" class="form-control" id="chkOut" placeholder="Check Out">
                 </div>
 
                 <div class="col-md-4 form-group">
-                    <label>Rooms:</label>
-
                     <select id="roomQty" name="roomQty" class="form-control" style="width:auto;">
+                        <option>Room</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -68,7 +64,7 @@
                 </div>
 
                 <div class="form-group col-md-4 col-md-offset-8 submitBtn">
-                    <button id="submitBtn" type="submit" class="btn btn-primary"
+                    <button id="submitBtn" type="submit" class="btn" style="background-color:darkblue;"
               onclick="location.href='@Url.Action("setValues", "Home")'">Submit</button>
              
                  </div>
