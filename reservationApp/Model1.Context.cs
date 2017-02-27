@@ -26,5 +26,7 @@ namespace reservationApp
         }
     
         public virtual DbSet<reservationTable> reservationTables { get; set; }
+
+        public System.Data.Entity.DbSet<reservationApp.Models.reservationModel> reservationModels { get; set; }
     }
 }

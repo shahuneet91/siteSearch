@@ -31,9 +31,6 @@ namespace reservationApp.Controllers
 
                
             }
-
-
-            Response.Write("hrllo");
             return View();
         }
     }

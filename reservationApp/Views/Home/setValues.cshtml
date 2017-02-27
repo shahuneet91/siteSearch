@@ -1,15 +1,47 @@
-﻿@model IEnumerable<reservationApp.Models.reservationModel>
+﻿@model reservationApp.Models.reservationModel
 
 @{
-    ViewBag.Title = "setValues";
+    ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>setValues</h2>
+<div>
+    <h4>Search Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.loc)
+        </dt>
 
+        <dd>
+            @ViewBag.loc
+            @Html.DisplayFor(model => model.loc)
+        </dd>
 
-<table class="table">
-    <tr>
-        
-    </tr>
-</table>
+        <dt>
+            @Html.DisplayNameFor(model => model.chkInDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chkInDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chkOutDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chkOutDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.room_Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_Qty)
+        </dd>
+
+    </dl>
+</div>
+

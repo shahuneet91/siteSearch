@@ -7,6 +7,7 @@ namespace reservationApp.Models
 {
     public class reservationModel
     {
+        public string id { get; set;}
         public string loc { get; set; }
         public string chkInDate { get; set; }
         public string chkOutDate { get; set; }
