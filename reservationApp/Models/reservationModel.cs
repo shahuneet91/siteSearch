@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace reservationModel.Models
+namespace reservationApp.Models
 {
     public class reservationModel
     {
@@ -11,6 +11,5 @@ namespace reservationModel.Models
         public string chkInDate { get; set; }
         public string chkOutDate { get; set; }
         public string room_Qty { get; set; }
-
     }
 }

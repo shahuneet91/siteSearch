@@ -1,0 +1,52 @@
+﻿@model IEnumerable<reservationApp.Models.reservationModel>
+
+@{
+    ViewBag.Title = "setValues";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>setValues</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.loc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkInDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkOutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.room_Qty)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.loc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkInDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkOutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_Qty)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
