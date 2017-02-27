@@ -1,14 +1,25 @@
 ﻿$("document").ready(function () {
 
     $("#roomQty").change(function () {
-        var value = jQuery(this).val();
+        var value = $(this).val();
         var repeatDiv = $("#repeatDiv");
         // alert(repeatDiv);
         // console.log(repeatDiv);
-        for (var i = 1; i < value; i++) {
-            repeatDiv.after(repeatDiv.clone().attr("id", "repeatDiv" + i + 1));
 
+        for (var i = 1; i < value; i++) {
+            var id = i + 1;
+            repeatDiv.after(repeatDiv.clone().attr("id", "repeatDiv" + id));
         }
+
+        for (var i = 1; i < value; i++) {
+            divID = repeatDiv.attr("id");
+            var id = divID.text().substr(9, 10);
+
+            if (id > value) {
+                $("#repeatDiv" + id).css("visibility", "hidden");
+            }
+        }
+
     });
 
     $(function () {
